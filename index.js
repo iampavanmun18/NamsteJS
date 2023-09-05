@@ -1,16 +1,12 @@
-// Sync-tasks -  they will wait for first task then 2nd and then third. e.g PHP
-console.log("Start Here!!")
-
-console.log("Middle Here!!")
-
-console.log("End Here!!")
-
-//Async-task -  they don't wait for anyone. e.g Node, Javascript
-console.log("1st Task")
+console.log("Starting Up!")
 
 setTimeout(() => {
-   console.log("I am 2nd task")
+   console.log("Two (2) second log")
+
 }, 2000);
 
+setTimeout(() => {
+   console.log("Zero (0) second log")
+}, 0);
 
-console.log("3rd task")
+console.log("Ending Up!")
