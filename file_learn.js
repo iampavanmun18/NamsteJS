@@ -31,4 +31,4 @@ fs.rename(filePath,`${dirPath}/fruit.txt` ,(err)=>{
 })
 
 // delete a file
-fs.unlinkSync(`${dirPath}/fruit.txt`)
+// fs.unlinkSync(`${dirPath}/fruit.txt`)
