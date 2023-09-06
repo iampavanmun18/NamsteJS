@@ -1,12 +1,30 @@
-console.log("Starting Up!")
+const express = require('express');
+const app = express();
 
-setTimeout(() => {
-   console.log("Two (2) second log")
+// display html data on web page
+app.get('/',(req,res)=>{
+   res.send("<h1>Hello This is Home Page</h1>")
+});
 
-}, 2000);
+//req -> req.query (req) will come from frontend.
+app.get('/about',(req,res)=>{
+   console.log("About", req.query.name)
+   res.send("Welcome to About Page,"+ req.query.name)
+})
 
-setTimeout(() => {
-   console.log("Zero (0) second log")
-}, 0);
+// display input data on web page
+app.get('/help',(req,res)=>{
+res.send("<input type='text' placeholder ='username'/>")
+})
 
-console.log("Ending Up!")
+// display json data on web page
+app.get('/details',(req,res)=>{
+   res.send({
+      name:'Pavan',
+      email:'Pavan@gmail.com'
+   })
+   })
+
+app.listen(4000,()=>{
+   console.log("server is running")
+})
