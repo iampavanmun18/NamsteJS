@@ -9,7 +9,7 @@ const reqFilter = (req, res, next) => {
   } else if (req.query.age) {
     res.send("This is a Home Page");
   } else {
-    next();
+    next(); // this is used to run the next method or next function in the program so that node should know what to execute after one condition.
   }
 };
 
